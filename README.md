@@ -1,26 +1,31 @@
-# sails-01
+API REST implementando SailsJS.
 
-a [Sails v1](https://sailsjs.com) application
+Para correr el proyecto, ejecutar en consola "sails lift".
 
+El servidor correr en el puerto 1337.
 
-### Links
+Endpoints Productos
 
-+ [Sails framework documentation](https://sailsjs.com/get-started)
-+ [Version notes / upgrading](https://sailsjs.com/documentation/upgrading)
-+ [Deployment tips](https://sailsjs.com/documentation/concepts/deployment)
-+ [Community support options](https://sailsjs.com/support)
-+ [Professional / enterprise options](https://sailsjs.com/enterprise)
+GET: /products => Lista todos los productos.
 
+GET: /products/:id_product => Lista producto por id.
 
-### Version info
+POST: /products/ => Crea un producto nuevo (enviar objeto con Postman).
 
-This app was originally generated on Fri Jun 17 2022 19:40:18 GMT-0300 (hora estándar de Argentina) using Sails v1.5.2.
+PUT: /products/:id_product => Actualiza producto por id (enviar objeto con Postman).
 
-<!-- Internally, Sails used [`sails-generate@2.0.6`](https://github.com/balderdashy/sails-generate/tree/v2.0.6/lib/core-generators/new). -->
+DELETE: /products/:id_product => Borra producto por id.
 
+Endpoints Carritos
 
+GET: /carts => Lista todos los carritos.
 
-<!--
-Note:  Generators are usually run using the globally-installed `sails` CLI (command-line interface).  This CLI version is _environment-specific_ rather than app-specific, thus over time, as a project's dependencies are upgraded or the project is worked on by different developers on different computers using different versions of Node.js, the Sails dependency in its package.json file may differ from the globally-installed Sails CLI release it was originally generated with.  (Be sure to always check out the relevant [upgrading guides](https://sailsjs.com/upgrading) before upgrading the version of Sails used by your app.  If you're stuck, [get help here](https://sailsjs.com/support).)
--->
+GET: /carts/:id_cart => Lista carrito por id.
 
+POST: /carts/ => Crea un carrito nuevo (enviar objeto con Postman: array con ids de productos o array vacío).
+
+POST: /carts/agregar/:id_cart/:id_product => Agrega el producto id_product al carrito id_cart.
+
+POST: /carts/quitar/:id_cart/:id_product => Borra el producto id_product al carrito id_cart.
+
+DELETE: /carts/:id_cart => Borra carrito por id.
