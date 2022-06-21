@@ -2,7 +2,7 @@ API REST implementando SailsJS.
 
 Para correr el proyecto, ejecutar en consola "sails lift".
 
-El servidor correr en el puerto 1337.
+El servidor corre en el puerto 1337.
 
 Endpoints Productos
 
